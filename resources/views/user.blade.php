@@ -5,10 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
-    @if($name)
+    @if($name && !$lastName)
         <h1>Hola {{ $name }} Doe</h1>
     @endif
-    @if($lastName)
+    @if($lastName && $name)
         <h1>Hola {{ $name }} {{ $lastName }}</h1>
     @endif
     @if(!$name)
